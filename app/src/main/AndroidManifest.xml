@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".ImageViewExample"/>
         <activity android:name=".RadioButtonTestActivity"/>
+        <activity android:name=".SeekBarTextActivity"/>
     </application>
 
 </manifest>

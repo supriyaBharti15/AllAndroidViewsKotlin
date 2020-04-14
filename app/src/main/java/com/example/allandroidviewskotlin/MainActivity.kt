@@ -34,13 +34,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(intent)
             }
             R.id.radioButtonExmp -> {
-                 intent = Intent(this@MainActivity,RadioButtonTestActivity::class.java)
+                intent = Intent(this@MainActivity, RadioButtonTestActivity::class.java)
                 startActivity(intent)
                 //startActivity(Intent(this, RadioButtonTestActivity::class.java))
             }
 
             R.id.seekBarExmp -> {
-
+                intent = Intent(this, SeekBarTextActivity::class.java)
+                startActivity(intent)
             }
             R.id.progressBarExmp -> {
 

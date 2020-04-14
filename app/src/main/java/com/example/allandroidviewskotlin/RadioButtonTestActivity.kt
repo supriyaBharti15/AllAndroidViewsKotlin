@@ -10,8 +10,6 @@ import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.get
-import org.w3c.dom.Text
 
 class RadioButtonTestActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
@@ -34,7 +32,7 @@ class RadioButtonTestActivity : AppCompatActivity() {
             radioBtn.id = View.generateViewId()
             /*
         change color of radio button text in kotlin using 2 way
-        
+
          */
             radioBtn.setTextColor(Color.GREEN)
             radioBtn.setTextColor(Color.parseColor("#0000FF"))
