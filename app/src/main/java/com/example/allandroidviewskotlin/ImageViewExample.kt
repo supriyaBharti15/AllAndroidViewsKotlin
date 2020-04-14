@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class ImageViewExample : AppCompatActivity() {
@@ -16,11 +17,15 @@ class ImageViewExample : AppCompatActivity() {
         val buttonClick = findViewById(R.id.changeImageBtn) as Button
         val imageView = findViewById(R.id.imageView) as ImageView
         val textView = findViewById(R.id.textView) as TextView
-        textView.setText("Message sent by MAinActivity is:: " + userName)
+        textView.setText("Message sent by MainActivity is:: " + userName)
 
         buttonClick.setOnClickListener {
             imageView.setImageResource(drawableImageIds[intCol % drawableImageIds.size])
             intCol++
+        }
+
+        imageView.setOnClickListener {
+            Toast.makeText(this,"U Clicked on image:",Toast.LENGTH_LONG).show()
         }
     }
 }
