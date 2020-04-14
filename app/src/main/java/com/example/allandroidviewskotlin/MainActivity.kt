@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 
-class MainActivity : AppCompatActivity(),View.OnClickListener {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private var mImageViewButton: Button? = null
     private var mRadioButton: Button? = null
@@ -17,12 +17,12 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         setContentView(R.layout.activity_main)
         mImageViewButton = findViewById(R.id.imageViewExmp)
         mRadioButton = findViewById(R.id.radioButtonExmp)
-        mRadioButton = findViewById(R.id.seekBarExmp)
+        mSeekBarButton = findViewById(R.id.seekBarExmp)
 
         //set clickListener on buttons
         mImageViewButton!!.setOnClickListener(this)
         mRadioButton!!.setOnClickListener(this)
-        mRadioButton!!.setOnClickListener(this)
+        mSeekBarButton!!.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -34,7 +34,9 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 startActivity(intent)
             }
             R.id.radioButtonExmp -> {
-
+                 intent = Intent(this@MainActivity,RadioButtonTestActivity::class.java)
+                startActivity(intent)
+                //startActivity(Intent(this, RadioButtonTestActivity::class.java))
             }
 
             R.id.seekBarExmp -> {

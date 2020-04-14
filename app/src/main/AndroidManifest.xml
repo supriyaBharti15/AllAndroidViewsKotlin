@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ImageViewExample"/>
+        <activity android:name=".RadioButtonTestActivity"/>
     </application>
 
 </manifest>
