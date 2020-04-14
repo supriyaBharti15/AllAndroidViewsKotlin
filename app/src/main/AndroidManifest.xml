@@ -23,6 +23,7 @@
         <activity android:name=".RadioButtonTestActivity"/>
         <activity android:name=".SeekBarTextActivity"/>
         <activity android:name=".WebViewActivity"/>
+        <activity android:name=".SnackBarActivity"/>
     </application>
 
 </manifest>

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -13,6 +12,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var mRadioButton: Button? = null
     private var mSeekBarButton: Button? = null
     private var mWebviewButton: Button? = null
+    private var mSnackbar: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,12 +21,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         mRadioButton = findViewById(R.id.radioButtonExmp)
         mSeekBarButton = findViewById(R.id.seekBarExmp)
         mWebviewButton = findViewById(R.id.webViewExmp)
+        mSnackbar = findViewById(R.id.SnackbarExmp)
 
         //set clickListener on buttons
         mImageViewButton!!.setOnClickListener(this)
         mRadioButton!!.setOnClickListener(this)
         mSeekBarButton!!.setOnClickListener(this)
         mWebviewButton!!.setOnClickListener(this)
+        mSnackbar!!.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -51,8 +53,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 intent = Intent(this, WebViewActivity::class.java)
                 startActivity(intent)
             }
-            R.id.progressBarExmp -> {
-                intent = Intent(this, WebViewActivity::class.java)
+            R.id.SnackbarExmp -> {
+                intent = Intent(this, SnackBarActivity::class.java)
                 startActivity(intent)
             }
         }
